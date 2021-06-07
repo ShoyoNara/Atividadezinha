@@ -122,11 +122,7 @@ public class FrMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        try {
-            new FrCadUsuario().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(FrMenu.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        new FrCadFabricante().setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
@@ -157,10 +153,8 @@ public class FrMenu extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrMenu().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FrMenu().setVisible(true);
         });
     }
 

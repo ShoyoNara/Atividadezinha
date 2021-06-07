@@ -15,12 +15,12 @@ public class Veiculo {
     private int id;
     private String marca;
     private String modelo;
-    private int ano;
+    private String ano;
     private String cor;
     private String placa;
     private String motor;
-    private int km;
-    private double valorfipe;
+    private String km;
+    private String valorfipe;
     
     //Fecha private
 
@@ -38,7 +38,7 @@ public class Veiculo {
         return modelo;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
@@ -54,11 +54,11 @@ public class Veiculo {
         return motor;
     }
 
-    public int getKm() {
+    public String getKm() {
         return km;
     }
 
-    public double getValorfipe() {
+    public String getValorfipe() {
         return valorfipe;
     }
 
@@ -78,7 +78,7 @@ public class Veiculo {
         this.modelo = modelo;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 
@@ -94,11 +94,11 @@ public class Veiculo {
         this.motor = motor;
     }
 
-    public void setKm(int km) {
+    public void setKm(String km) {
         this.km = km;
     }
 
-    public void setValorfipe(double valorfipe) {
+    public void setValorfipe(String valorfipe) {
         this.valorfipe = valorfipe;
     }
     

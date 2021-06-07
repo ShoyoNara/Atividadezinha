@@ -296,12 +296,12 @@ public class FrCasVeiculo extends javax.swing.JFrame {
         u.setId(Integer.parseInt(txtId.getText()));
          u.setMarca(txtMarca.getText());
         u.setModelo(txtModelo.getText());
-        u.setAno(txtAno.countComponents());
+        u.setAno(txtAno.getText());
         u.setCor(txtCor.getText());
         u.setPlaca(txtPlaca.getText());
         u.setMotor(txtMotor.getText());
-        u.setKm (txtKm.countComponents());
-        u.setValorfipe(txtValorfipe.countComponents());
+        u.setKm (txtKm.getText());
+        u.setValorfipe(txtValorfipe.getText());
         
         VeiculoDao udao;
 
@@ -311,12 +311,12 @@ public class FrCasVeiculo extends javax.swing.JFrame {
         Veiculo u = new Veiculo();
         u.setMarca(txtMarca.getText());
         u.setModelo(txtModelo.getText());
-        u.setAno(txtAno.countComponents());
+        u.setAno(txtAno.getText());
         u.setCor(txtCor.getText());
         u.setPlaca(txtPlaca.getText());
         u.setMotor(txtMotor.getText());
-        u.setKm (txtKm.countComponents());
-        u.setValorfipe(txtValorfipe.countComponents());
+        u.setKm (txtKm.getText());
+        u.setValorfipe(txtValorfipe.getText());
        
         try {
             VeiculoDao udao = new VeiculoDao();

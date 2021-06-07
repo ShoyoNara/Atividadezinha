@@ -30,12 +30,12 @@ public class VeiculoDao {
                     + "modelo,ano,cor,placa,motor,km,valorfipe) VALUE (?,?,?,?)");
             stmt.setString(1, u.getMarca());
             stmt.setString(2, u.getModelo());
-            stmt.setInt(3, u.getAno());
+            stmt.setString(3, u.getAno());
             stmt.setString(4, u.getCor());
             stmt.setString(4, u.getPlaca());
             stmt.setString(4, u.getMotor());
-            stmt.setInt(4, u.getKm());
-            stmt.setDouble(4, u.getValorfipe());
+            stmt.setString(4, u.getKm());
+            stmt.setString(4, u.getValorfipe());
             stmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "veiculo de modelo"+u.getModelo()
                     +" Salvo com Sucesso!!");
@@ -60,12 +60,12 @@ public class VeiculoDao {
                 veiculo.setId(rs.getInt("Id"));
                 veiculo.setMarca(rs.getString("Marca"));
                 veiculo.setModelo(rs.getString("Modelo"));
-                veiculo.setAno(rs.getInt("Ano"));
+                veiculo.setAno(rs.getString("Ano"));
                 veiculo.setCor(rs.getString("Cor"));
                 veiculo.setPlaca(rs.getString("Placa"));
                 veiculo.setMotor(rs.getString("Motor"));
-                veiculo.setKm(rs.getInt("Quiôometro"));
-                veiculo.setValorfipe(rs.getDouble("ValorFipe"));
+                veiculo.setKm(rs.getString("Quiôometro"));
+                veiculo.setValorfipe(rs.getString("ValorFipe"));
                 Veiculos.add(veiculo);
             }
         } catch (SQLException e) {
@@ -89,12 +89,12 @@ public class VeiculoDao {
                 veiculo.setId(rs.getInt("Id"));
                 veiculo.setMarca(rs.getString("MArca"));
                 veiculo.setModelo(rs.getString("Modelo"));
-                veiculo.setAno(rs.getInt("Ano"));
+                veiculo.setAno(rs.getString("Ano"));
                 veiculo.setCor(rs.getString("Cor"));
                 veiculo.setPlaca(rs.getString("Placa"));
                 veiculo.setMotor(rs.getString("Motr"));
-                veiculo.setKm(rs.getInt("Km"));
-                veiculo.setValorfipe(rs.getDouble("Valorfipe"));
+                veiculo.setKm(rs.getString("Km"));
+                veiculo.setValorfipe(rs.getString("Valorfipe"));
                 veiculo.add(veiculo);
             }
         } catch (SQLException e) {
@@ -114,13 +114,13 @@ public class VeiculoDao {
                     + "Km = ?, Valorfipe = ?, WHERE id = ?");
             stmt.setString(1, u.getMarca());
             stmt.setString(2, u.getModelo());
-            stmt.setInt(3, u.getAno());
+            stmt.setString(3, u.getAno());
             stmt.setString(4, u.getCor());
             stmt.setInt(5, u.getId());
             stmt.setString(5, u.getPlaca());
             stmt.setString(5, u.getMotor());
-            stmt.setInt(5, u.getKm());
-            stmt.setDouble(5, u.getValorfipe());
+            stmt.setString(5, u.getKm());
+            stmt.setString(5, u.getValorfipe());
             stmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Veiculo Da Marca"+u.getMarca()
                     +" Modificado com Sucesso!!");

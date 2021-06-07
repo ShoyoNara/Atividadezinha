@@ -5,7 +5,7 @@
  */
 package br.ulbra.view;
 
-import br.ulbra.model.UsuarioDao;
+import br.ulbra.model.FabricanteDao;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -138,9 +138,9 @@ public class FrLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLogarActionPerformed
-         UsuarioDao usu = null;
+         FabricanteDao usu = null;
         try {
-            usu = new UsuarioDao();
+            usu = new FabricanteDao();
              if(usu.checkLogin(txtEmail.getText(), txtSenha.getText())){
              new FrMenu().setVisible(true);
              this.dispose();
@@ -182,10 +182,8 @@ public class FrLogin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrLogin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FrLogin().setVisible(true);
         });
     }
 
